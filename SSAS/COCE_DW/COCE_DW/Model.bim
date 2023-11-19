@@ -1,0 +1,917 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "es-NI",
+    "dataSources": [
+      {
+        "name": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW",
+        "connectionString": "Provider=SQLNCLI11;Data Source=localhost;Initial Catalog=Consulta_Operadores_Comercio_Exterior_DW;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateAccount",
+        "account": "oscar",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "Dim_Aduana",
+        "columns": [
+          {
+            "name": "Aduana_Key",
+            "dataType": "int64",
+            "sourceColumn": "Aduana_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Id_Aduana",
+            "dataType": "int64",
+            "sourceColumn": "Id_Aduana",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Aduana",
+            "dataType": "string",
+            "sourceColumn": "Aduana",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Aduana",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_Aduana].* FROM [dbo].[Dim_Aduana] ",
+              "dataSource": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_Aduana].* FROM [dbo].[Dim_Aduana] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_Aduana"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Declaracion",
+        "columns": [
+          {
+            "name": "Declaracion_Key",
+            "dataType": "int64",
+            "sourceColumn": "Declaracion_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Id_Declaracion",
+            "dataType": "int64",
+            "sourceColumn": "Id_Declaracion",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Id_Usuario",
+            "dataType": "string",
+            "sourceColumn": "Id_Usuario",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Nombre_Usuario",
+            "dataType": "string",
+            "sourceColumn": "Nombre_Usuario",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "TipoRazon_Usuario",
+            "dataType": "string",
+            "sourceColumn": "TipoRazon_Usuario",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Estado_Usuario",
+            "dataType": "string",
+            "sourceColumn": "Estado_Usuario",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "ActividadEconomica_Usuario",
+            "dataType": "string",
+            "sourceColumn": "ActividadEconomica_Usuario",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Domicilio_Usuario",
+            "dataType": "string",
+            "sourceColumn": "Domicilio_Usuario",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Telefono",
+            "dataType": "string",
+            "sourceColumn": "Telefono",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Correo_Usuario",
+            "dataType": "string",
+            "sourceColumn": "Correo_Usuario",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Aduana_Key",
+            "dataType": "int64",
+            "sourceColumn": "Aduana_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Regimen_Key",
+            "dataType": "int64",
+            "sourceColumn": "Regimen_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "EstadoDeclaracion_Key",
+            "dataType": "int64",
+            "sourceColumn": "EstadoDeclaracion_Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Declaracion",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_Declaracion].* FROM [dbo].[Dim_Declaracion] ",
+              "dataSource": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_Declaracion].* FROM [dbo].[Dim_Declaracion] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_Declaracion"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Estado_Declaracion",
+        "columns": [
+          {
+            "name": "EstadoDeclaracion_Key",
+            "dataType": "int64",
+            "sourceColumn": "EstadoDeclaracion_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Id_EstadoDeclaracion",
+            "dataType": "int64",
+            "sourceColumn": "Id_EstadoDeclaracion",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Estado",
+            "dataType": "string",
+            "sourceColumn": "Estado",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Estado_Declaracion",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_Estado_Declaracion].* FROM [dbo].[Dim_Estado_Declaracion] ",
+              "dataSource": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_Estado_Declaracion].* FROM [dbo].[Dim_Estado_Declaracion] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_Estado_Declaracion"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_EstadoAdeudo",
+        "columns": [
+          {
+            "name": "EstadoAdeudo_Key",
+            "dataType": "int64",
+            "sourceColumn": "EstadoAdeudo_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Id_EstadoAdeudo",
+            "dataType": "int64",
+            "sourceColumn": "Id_EstadoAdeudo",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "EstadoAdeudo",
+            "dataType": "string",
+            "sourceColumn": "EstadoAdeudo",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_EstadoAdeudo",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_EstadoAdeudo].* FROM [dbo].[Dim_EstadoAdeudo] ",
+              "dataSource": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_EstadoAdeudo].* FROM [dbo].[Dim_EstadoAdeudo] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_EstadoAdeudo"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_EstadoAuditoria",
+        "columns": [
+          {
+            "name": "EstadoAuditoria_Key",
+            "dataType": "int64",
+            "sourceColumn": "EstadoAuditoria_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Id_EstadoAuditoria",
+            "dataType": "int64",
+            "sourceColumn": "Id_EstadoAuditoria",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "EstadoAuditoria",
+            "dataType": "string",
+            "sourceColumn": "EstadoAuditoria",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_EstadoAuditoria",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_EstadoAuditoria].* FROM [dbo].[Dim_EstadoAuditoria] ",
+              "dataSource": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_EstadoAuditoria].* FROM [dbo].[Dim_EstadoAuditoria] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_EstadoAuditoria"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_FormaAuditoria",
+        "columns": [
+          {
+            "name": "FormaAuditoria_Key",
+            "dataType": "int64",
+            "sourceColumn": "FormaAuditoria_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Id_FormaAuditoria",
+            "dataType": "int64",
+            "sourceColumn": "Id_FormaAuditoria",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FormaAuditoria",
+            "dataType": "string",
+            "sourceColumn": "FormaAuditoria",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_FormaAuditoria",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_FormaAuditoria].* FROM [dbo].[Dim_FormaAuditoria] ",
+              "dataSource": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_FormaAuditoria].* FROM [dbo].[Dim_FormaAuditoria] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_FormaAuditoria"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_MotivoAdeudo",
+        "columns": [
+          {
+            "name": "MotivoAdeudo_Key",
+            "dataType": "int64",
+            "sourceColumn": "MotivoAdeudo_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Id_MotivoAdeudo",
+            "dataType": "int64",
+            "sourceColumn": "Id_MotivoAdeudo",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "MotivoAdeudo",
+            "dataType": "string",
+            "sourceColumn": "MotivoAdeudo",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_MotivoAdeudo",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_MotivoAdeudo].* FROM [dbo].[Dim_MotivoAdeudo] ",
+              "dataSource": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_MotivoAdeudo].* FROM [dbo].[Dim_MotivoAdeudo] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_MotivoAdeudo"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Regimen",
+        "columns": [
+          {
+            "name": "Regimen_Key",
+            "dataType": "int64",
+            "sourceColumn": "Regimen_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Id_Regimen",
+            "dataType": "int64",
+            "sourceColumn": "Id_Regimen",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Regimen",
+            "dataType": "string",
+            "sourceColumn": "Regimen",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Regimen",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_Regimen].* FROM [dbo].[Dim_Regimen] ",
+              "dataSource": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_Regimen].* FROM [dbo].[Dim_Regimen] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_Regimen"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_RegistroAuditoria",
+        "columns": [
+          {
+            "name": "RegistroAuditoria_Key",
+            "dataType": "int64",
+            "sourceColumn": "RegistroAuditoria_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Id_RegistroAuditoria",
+            "dataType": "int64",
+            "sourceColumn": "Id_RegistroAuditoria",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "EstadoAuditoria_Key",
+            "dataType": "int64",
+            "sourceColumn": "EstadoAuditoria_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TipoAuditoria_Key",
+            "dataType": "int64",
+            "sourceColumn": "TipoAuditoria_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FormaAuditoria_Key",
+            "dataType": "int64",
+            "sourceColumn": "FormaAuditoria_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Declaracion_Key",
+            "dataType": "int64",
+            "sourceColumn": "Declaracion_Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_RegistroAuditoria",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_RegistroAuditoria].* FROM [dbo].[Dim_RegistroAuditoria] ",
+              "dataSource": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_RegistroAuditoria].* FROM [dbo].[Dim_RegistroAuditoria] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_RegistroAuditoria"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Time_1",
+        "columns": [
+          {
+            "name": "TimeKey",
+            "dataType": "int64",
+            "sourceColumn": "TimeKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Nombre_Mes",
+            "dataType": "string",
+            "sourceColumn": "Nombre_Mes",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Mes",
+            "dataType": "int64",
+            "sourceColumn": "Mes",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "Anio",
+            "dataType": "string",
+            "sourceColumn": "Anio",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Fecha",
+            "dataType": "dateTime",
+            "sourceColumn": "Fecha",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Time_1",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_Time_1].* FROM [dbo].[Dim_Time_1] ",
+              "dataSource": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_Time_1].* FROM [dbo].[Dim_Time_1] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_Time_1"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_TipoAdeudo",
+        "columns": [
+          {
+            "name": "TipoAdeudo_Key",
+            "dataType": "int64",
+            "sourceColumn": "TipoAdeudo_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Id_TipoAdeudo",
+            "dataType": "int64",
+            "sourceColumn": "Id_TipoAdeudo",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TipoAdeudo",
+            "dataType": "string",
+            "sourceColumn": "TipoAdeudo",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_TipoAdeudo",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_TipoAdeudo].* FROM [dbo].[Dim_TipoAdeudo] ",
+              "dataSource": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_TipoAdeudo].* FROM [dbo].[Dim_TipoAdeudo] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_TipoAdeudo"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_TipoAuditoria",
+        "columns": [
+          {
+            "name": "TipoAuditoria_Key",
+            "dataType": "int64",
+            "sourceColumn": "TipoAuditoria_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Id_TipoAuditoria",
+            "dataType": "int64",
+            "sourceColumn": "Id_TipoAuditoria",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TipoAuditoria",
+            "dataType": "string",
+            "sourceColumn": "TipoAuditoria",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_TipoAuditoria",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_TipoAuditoria].* FROM [dbo].[Dim_TipoAuditoria] ",
+              "dataSource": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_TipoAuditoria].* FROM [dbo].[Dim_TipoAuditoria] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_TipoAuditoria"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "FT_Detalle_Adeudo",
+        "columns": [
+          {
+            "name": "TimeKey",
+            "dataType": "int64",
+            "sourceColumn": "TimeKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "EstadoAdeudo_Key",
+            "dataType": "int64",
+            "sourceColumn": "EstadoAdeudo_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "MotivoAdeudo_Key",
+            "dataType": "int64",
+            "sourceColumn": "MotivoAdeudo_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TipoAdeudo_Key",
+            "dataType": "int64",
+            "sourceColumn": "TipoAdeudo_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Declaracion_Key",
+            "dataType": "int64",
+            "sourceColumn": "Declaracion_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "RegistroAuditoria_Key",
+            "dataType": "int64",
+            "sourceColumn": "RegistroAuditoria_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Monto",
+            "dataType": "double",
+            "sourceColumn": "Monto",
+            "sourceProviderType": "Double"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FT_Detalle_Adeudo",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[FT_Detalle_Adeudo].* FROM [dbo].[FT_Detalle_Adeudo] ",
+              "dataSource": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[FT_Detalle_Adeudo].* FROM [dbo].[FT_Detalle_Adeudo] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "FT_Detalle_Adeudo"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "sysdiagrams",
+        "columns": [
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "principal_id",
+            "dataType": "int64",
+            "sourceColumn": "principal_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "diagram_id",
+            "dataType": "int64",
+            "sourceColumn": "diagram_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "version",
+            "dataType": "int64",
+            "sourceColumn": "version",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "sysdiagrams",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[sysdiagrams].* FROM [dbo].[sysdiagrams] ",
+              "dataSource": "SqlServer localhost Consulta_Operadores_Comercio_Exterior_DW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[sysdiagrams].* FROM [dbo].[sysdiagrams] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "sysdiagrams"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "49fc744a-67e3-493d-a4ec-91a3a42d04e1",
+        "fromTable": "FT_Detalle_Adeudo",
+        "fromColumn": "RegistroAuditoria_Key",
+        "toTable": "Dim_RegistroAuditoria",
+        "toColumn": "RegistroAuditoria_Key",
+        "isActive": false
+      },
+      {
+        "name": "87a8d810-2d5c-409e-b55b-6b40b855f0ff",
+        "fromTable": "Dim_Declaracion",
+        "fromColumn": "Aduana_Key",
+        "toTable": "Dim_Aduana",
+        "toColumn": "Aduana_Key"
+      },
+      {
+        "name": "1094e8cf-6020-4916-b597-b0648b430d37",
+        "fromTable": "Dim_Declaracion",
+        "fromColumn": "EstadoDeclaracion_Key",
+        "toTable": "Dim_Estado_Declaracion",
+        "toColumn": "EstadoDeclaracion_Key"
+      },
+      {
+        "name": "f40771b2-3f75-4a7c-90df-2f930a4045fb",
+        "fromTable": "Dim_Declaracion",
+        "fromColumn": "Regimen_Key",
+        "toTable": "Dim_Regimen",
+        "toColumn": "Regimen_Key"
+      },
+      {
+        "name": "44bfd95c-4818-4180-87ef-c2e997874bfe",
+        "fromTable": "Dim_RegistroAuditoria",
+        "fromColumn": "Declaracion_Key",
+        "toTable": "Dim_Declaracion",
+        "toColumn": "Declaracion_Key"
+      },
+      {
+        "name": "754f4fd6-f6f9-44dd-8946-822d15d94eb9",
+        "fromTable": "Dim_RegistroAuditoria",
+        "fromColumn": "EstadoAuditoria_Key",
+        "toTable": "Dim_EstadoAuditoria",
+        "toColumn": "EstadoAuditoria_Key"
+      },
+      {
+        "name": "bad67f35-4a93-4652-a47b-e3c681b1a863",
+        "fromTable": "Dim_RegistroAuditoria",
+        "fromColumn": "FormaAuditoria_Key",
+        "toTable": "Dim_FormaAuditoria",
+        "toColumn": "FormaAuditoria_Key"
+      },
+      {
+        "name": "e354c271-cdb9-4535-a3ed-95598b6d03b8",
+        "fromTable": "Dim_RegistroAuditoria",
+        "fromColumn": "TipoAuditoria_Key",
+        "toTable": "Dim_TipoAuditoria",
+        "toColumn": "TipoAuditoria_Key"
+      },
+      {
+        "name": "597abb65-4cc7-4719-a143-6bb1b0d26a5d",
+        "fromTable": "FT_Detalle_Adeudo",
+        "fromColumn": "Declaracion_Key",
+        "toTable": "Dim_Declaracion",
+        "toColumn": "Declaracion_Key"
+      },
+      {
+        "name": "b56ff294-6653-4893-8767-ebfe9aedf50a",
+        "fromTable": "FT_Detalle_Adeudo",
+        "fromColumn": "EstadoAdeudo_Key",
+        "toTable": "Dim_EstadoAdeudo",
+        "toColumn": "EstadoAdeudo_Key"
+      },
+      {
+        "name": "27b79289-3033-4f4f-8c7a-a46929582793",
+        "fromTable": "FT_Detalle_Adeudo",
+        "fromColumn": "MotivoAdeudo_Key",
+        "toTable": "Dim_MotivoAdeudo",
+        "toColumn": "MotivoAdeudo_Key"
+      },
+      {
+        "name": "121a311f-7f64-4729-be96-bda9aac88483",
+        "fromTable": "FT_Detalle_Adeudo",
+        "fromColumn": "TimeKey",
+        "toTable": "Dim_Time_1",
+        "toColumn": "TimeKey"
+      },
+      {
+        "name": "e6a14f6e-394d-449a-adf7-a7fa083c1563",
+        "fromTable": "FT_Detalle_Adeudo",
+        "fromColumn": "TipoAdeudo_Key",
+        "toTable": "Dim_TipoAdeudo",
+        "toColumn": "TipoAdeudo_Key"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

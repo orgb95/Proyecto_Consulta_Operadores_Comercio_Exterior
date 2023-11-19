@@ -1,0 +1,7 @@
+C:\Users\oscar\OneDrive\Escritorio\Proyecto\SSAS\COCE_DW\COCE_DW\bin\Model.asdatabase
+C:\Users\oscar\OneDrive\Escritorio\Proyecto\SSAS\COCE_DW\COCE_DW\bin\Model.deploymenttargets
+C:\Users\oscar\OneDrive\Escritorio\Proyecto\SSAS\COCE_DW\COCE_DW\bin\Model.deploymentoptions
+C:\Users\oscar\OneDrive\Escritorio\Proyecto\SSAS\COCE_DW\COCE_DW\obj\Development\COCE_DW.smproj.CoreCompileInputs.cache
+C:\Users\oscar\OneDrive\Escritorio\Proyecto\SSAS\COCE_DW\COCE_DW\obj\Development\Model.asdatabase
+C:\Users\oscar\OneDrive\Escritorio\Proyecto\SSAS\COCE_DW\COCE_DW\obj\Development\Model.deploymentoptions
+C:\Users\oscar\OneDrive\Escritorio\Proyecto\SSAS\COCE_DW\COCE_DW\obj\Development\Model.deploymenttargets
